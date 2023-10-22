@@ -65,7 +65,7 @@
                                 <div class="btn-group">
                                     <a href="#" class="default-btn default-btn--secondary move-top">
                                         <span>
-                                            Get Ticket
+                                            Register Now
                                         </span>
                                     </a>
                                 </div>
@@ -86,8 +86,7 @@
     <section class="feature padding-top padding-bottom bg--white" id="feature">
         <div class="container">
             <div class="section-header text-center" data-aos="fade-up" data-aos-duration="900">
-                <p class="subtitle">Features</p>
-                <h2>What We Offer?</h2>
+                <p class="subtitle">Opportunities</p>
             </div>
 
             <div class="feature__wrapper">
@@ -101,10 +100,11 @@
                                     </div>
                                 </div>
                                 <div class="feature__item-content text-center">
-                                    <h4>Weclome Speech </h4>
+                                    <h4>NJAR</h4>
                                     <div class="feature__item-text">
-                                        <p>Lorem ipsum dolor siteryl amet, conseco tetur adip isic sing elit, sed domerx
-                                            eius mod tempor </p>
+                                        <p>
+                                            Nigerian Journal of Accounting Research
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -119,10 +119,11 @@
                                     </div>
                                 </div>
                                 <div class="feature__item-content text-center">
-                                    <h4> Successfull Story</h4>
+                                    <h4> IJCRTF</h4>
                                     <div class="feature__item-text">
-                                        <p>Lorem ipsum dolor siteryl amet, conseco tetur adip isic sing elit, sed domerx
-                                            eius mod tempor</p>
+                                        <p>
+                                            International Journal of Corporate Reporting Taxation and Finance
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -137,10 +138,11 @@
                                     </div>
                                 </div>
                                 <div class="feature__item-content text-center">
-                                    <h4>Quize Play</h4>
+                                    <h4>Meet Up/Presentations</h4>
                                     <div class="feature__item-text">
-                                        <p>Lorem ipsum dolor siteryl amet, conseco tetur adip isic sing elit, sed domerx
-                                            eius mod tempor</p>
+                                        <p>
+                                            Opening Ceremony Meet up and Presentations
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -155,10 +157,11 @@
                                     </div>
                                 </div>
                                 <div class="feature__item-content text-center">
-                                    <h4>Envato Award</h4>
+                                    <h4>Award</h4>
                                     <div class="feature__item-text">
-                                        <p>Lorem ipsum dolor siteryl amet, conseco tetur adip isic sing elit, sed domerx
-                                            eius mod tempor</p>
+                                        <p>
+                                            Certificates
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -494,9 +497,7 @@
             </div>
         </div>
         <div class="venue__map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830894612!2d-74.11976383964465!3d40.69766374865766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sbd!4v1667646866236!5m2!1sen!2sbd"
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.586326970306!2d7.650256974849656!3d11.144155089027834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11b285da2b6e7897%3A0xf62c1cf6cf73bbd1!2sABU%20Business%20School%20(Center%20for%20Excellence)!5e0!3m2!1sen!2sng!4v1697958239945!5m2!1sen!2sng" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </section>
     <!-- ================Venue section end here <================== -->
