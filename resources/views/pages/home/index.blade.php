@@ -176,31 +176,31 @@
 
 
 
-    <!-- ================> Event access section start here <================== -->
-    <section class="event-access padding-top padding-bottom">
-        <div class="mockup" data-aos="fade-up-left" data-aos-duration="900">
-            <img class="mok-img" src="./assets/images/event/mobile.png" alt="">
-        </div>
-        <div class="container">
-            <div class="contact__wrapper">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="event-access-content" data-aos="fade-right" data-aos-duration="900">
-                            <h2>You can access us from mobile !</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi
-                                dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci
-                                tation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                            </p>
-                            <a href="#" class="default-btn move-right"><span>Get Ticket <i
-                                        class="fa-solid fa-arrow-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ================> Event access section end here <================== -->
+{{--    <!-- ================> Event access section start here <================== -->--}}
+{{--    <section class="event-access padding-top padding-bottom">--}}
+{{--        <div class="mockup" data-aos="fade-up-left" data-aos-duration="900">--}}
+{{--            <img class="mok-img" src="./assets/images/event/mobile.png" alt="">--}}
+{{--        </div>--}}
+{{--        <div class="container">--}}
+{{--            <div class="contact__wrapper">--}}
+{{--                <div class="row">--}}
+{{--                    <div class="col-lg-6">--}}
+{{--                        <div class="event-access-content" data-aos="fade-right" data-aos-duration="900">--}}
+{{--                            <h2>You can access us from mobile !</h2>--}}
+{{--                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi--}}
+{{--                                dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci--}}
+{{--                                tation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in--}}
+{{--                                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur--}}
+{{--                            </p>--}}
+{{--                            <a href="#" class="default-btn move-right"><span>Get Ticket <i--}}
+{{--                                        class="fa-solid fa-arrow-right"></i></span></a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
+{{--    <!-- ================> Event access section end here <================== -->--}}
 
 
 
