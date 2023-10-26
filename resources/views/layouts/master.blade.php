@@ -20,7 +20,7 @@
 
 <!-- ===============>> Preloader start here <<================= -->
 <div class="preloader">
-    <img src="assets/images/logo/preloader.gif" alt="Uevent">
+    <img src="/assets/images/logo/preloader.gif" alt="Uevent">
 </div>
 <!-- ===============>> Preloader end here <<================= -->
 @include('commons.master.header')

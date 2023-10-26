@@ -12,7 +12,7 @@
                 <div class="menu-area">
                     <ul class="menu">
                         <li>
-                            <a href="#home">Home</a>
+                            <a href="{{route('login')}}">Home</a>
                         </li>
 
 {{--                        <li>--}}
@@ -40,9 +40,12 @@
                         <li>
                             <a href="contact.html">Contact</a>
                         </li>
+                        <li>
+                            <a href="{{route('participant.login.form')}}">Sign in</a>
+                        </li>
                     </ul>
                     <div class="header-btn">
-                        <a href="#" class="default-btn move-right">
+                        <a href="{{route('participant.signup')}}" class="default-btn move-right">
                             <span>Join Now <i class="fa-solid fa-arrow-right"></i></span>
                         </a>
                     </div>

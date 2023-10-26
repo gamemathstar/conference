@@ -9,7 +9,7 @@ class ParticipantLoginController extends Controller
 {
     public function showLoginForm()
     {
-        return view('participant.login');
+        return view('pages.participant.signin');
     }
 
     public function login(Request $request)
