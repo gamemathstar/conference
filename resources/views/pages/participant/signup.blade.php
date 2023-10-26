@@ -11,6 +11,15 @@
             <div class="row g-5 align-items-center flex-md-row-reverse">
                 <div class="col-lg-5">
                     <div class="account__wrapper">
+                        @if (count($errors) > 0)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
                         <h3 class="title">Sign Up</h3>
                         <form class="account__for" method="post" action="{{ route('participant.signup') }}">
                             @csrf

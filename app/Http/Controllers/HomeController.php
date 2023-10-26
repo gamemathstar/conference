@@ -21,11 +21,11 @@ class HomeController extends Controller
 
     public function signupPost(Request $request)
     {
-        $this->validate($request,[
-           "email"=>"required|email|unique:participants,email",
-           "name"=>"required",
-           "password"=>"required|confirmed",
-            "role"=>"required"
+        $this->validate($request, [
+            "email" => "required|email|unique:participants,email",
+            "name" => "required",
+            "password" => "required|confirmed",
+            "role" => "required"
         ]);
 
         $participant = new Participant();
@@ -46,16 +46,16 @@ class HomeController extends Controller
     public function signinPost(Request $request)
     {
 //        return $request;
-        $credentials = ["email"=>$request->email,"password"=>$request->password];
-        if(Auth::guard("participant")->attempt($credentials,1)){
+        $credentials = ["email" => $request->email, "password" => $request->password];
+        if (Auth::guard("participant")->attempt($credentials, 1)) {
             return redirect()->intended(route("student.dashboard"));
         }
-        return back()->withErrors(['message'=>"invalid credentials"]);
-        $this->validate($request,[
-           "email"=>"required|email|unique:participants,email",
-           "name"=>"required",
-           "password"=>"required|confirmed",
-            "role"=>"required"
+        return back()->withErrors(['message' => "invalid credentials"]);
+        $this->validate($request, [
+            "email" => "required|email|unique:participants,email",
+            "name" => "required",
+            "password" => "required|confirmed",
+            "role" => "required"
         ]);
 
         $participant = new Participant();
