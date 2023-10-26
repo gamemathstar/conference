@@ -11,6 +11,11 @@
             <div class="row g-5 align-items-center flex-md-row-reverse">
                 <div class="col-lg-5">
                     <div class="account__wrapper">
+                        @if(Session::has('success'))
+                            <div class="alert alert-success">
+                                {{ Session::get('success') }}
+                            </div>
+                        @endif
                         @if (count($errors) > 0)
                             <div class="alert alert-danger">
                                 <ul>

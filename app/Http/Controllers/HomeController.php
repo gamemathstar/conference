@@ -34,8 +34,8 @@ class HomeController extends Controller
         $participant->role = $request->role;
         $participant->password = bcrypt($request->password);
         $participant->save();
-
-        return redirect(route('signin'));
+        $request->session()->flash('success', 'Account creation successful, please proceed to login.');
+        return back()->with('success',"Account creation successful");//redirect(route('signin'));
     }
 
     public function signin(Request $request)
