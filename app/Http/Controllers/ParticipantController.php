@@ -49,7 +49,7 @@ class ParticipantController extends Controller
     {
         $user = Auth::user();
         $request->validate([
-            'conference' => 'required|mimes:docx,doc,pdf|max:2048'
+            'conference' => 'required|file|mimes:docx,doc,pdf|max:2048'
         ]);
         $conf = Conference::conference();
         $part = $user->hasApplied($conf->id);

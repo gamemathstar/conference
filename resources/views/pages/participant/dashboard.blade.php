@@ -84,14 +84,28 @@
 
                                                         </td>
                                                     </tr>
-                                                    @foreach($user->submissions($conf->id) as $submission)
-                                                    <tr>
-                                                        <td>
-                                                            <a href="{{route('participant.conference.download',[$submission->id])}}">Download</a>
-                                                        </td>
-                                                        <td>{{$submission->title}}</td>
-                                                    </tr>
 
+
+                                                </table>
+
+                                                <table class="table table-bordered">
+                                                    <tr>
+                                                        <th>SN</th>
+                                                        <th>Download</th>
+                                                        <th>Document For</th>
+                                                        <th>Review Status</th>
+                                                        <th>Remark</th>
+                                                    </tr>
+                                                    @foreach($user->submissions($conf->id) as $submission)
+                                                        <tr>
+                                                            <td>{{$loop->iteration}}</td>
+                                                            <td>
+                                                                <a href="{{route('participant.conference.download',[$submission->id])}}">Download</a>
+                                                            </td>
+                                                            <td>{{$submission->title}}</td>
+                                                            <td>{{$submission->status=="rejected"?"Corrections Required":"Accepted"}}</td>
+                                                            <td>{{$submission->remark}}</td>
+                                                        </tr>
                                                     @endforeach
                                                 </table>
                                             </form>

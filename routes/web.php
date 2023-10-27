@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ParticipantController;
 use App\Http\Controllers\ParticipantLoginController;
@@ -26,7 +28,12 @@ Route::prefix("/")->group(function () {
 Route::prefix("/admin")->group(function () {
     Route::get('/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login.form');
     Route::post('/login', [AdminLoginController::class, 'login'])->name('admin.login');
-    Route::post('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+    Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
+
+    Route::get('/dashboard', [AdminController::class,'dashboard'])->name('admin.dashboard');
+    Route::get('/download/{submission}', [AdminController::class,'download'])->name('admin.download');
+    Route::post('/admin/review/{submission}', [AdminController::class,'submitReview'])->name('admin.review');
+
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function () {

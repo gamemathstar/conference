@@ -40,15 +40,34 @@
                         <li>
                             <a href="contact.html">Contact</a>
                         </li>
+                        @auth("participant")
                         <li>
-                            <a href="{{route('participant.login.form')}}">Sign in</a>
+                            <a href="{{route('participant.logout')}}">Logout</a>
                         </li>
+                        @endauth
+
+                        @auth("admin")
+                            <li>
+                                <a href="{{route('admin.logout')}}">Logout</a>
+                            </li>
+                        @endauth
+
+                        @auth()
                     </ul>
-                    <div class="header-btn">
-                        <a href="{{route('participant.signup')}}" class="default-btn move-right">
-                            <span>Join Now <i class="fa-solid fa-arrow-right"></i></span>
-                        </a>
-                    </div>
+                        @else
+
+                            <li>
+                                <a href="{{route('participant.login.form')}}">Sign in</a>
+                            </li>
+                        </ul>
+                        <div class="header-btn">
+                            <a href="{{route('participant.signup')}}" class="default-btn move-right">
+                                <span>Join Now <i class="fa-solid fa-arrow-right"></i></span>
+                            </a>
+                        </div>
+                        @endauth
+
+
 
                     <!-- toggle icons -->
                     <div class="header-bar d-lg-none">
