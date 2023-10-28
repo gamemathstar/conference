@@ -33,7 +33,7 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="#" class="default-btn move-right"><span>Get Ticket <i
+                    <a href="{{ route('participant.login.form') }}" class="default-btn move-right"><span>Get Ticket <i
                                 class="fa-solid fa-arrow-right"></i></span> </a>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                                 {!! $conf->description !!}
 
                                 <div class="btn-group">
-                                    <a href="#" class="default-btn default-btn--secondary move-top">
+                                    <a href="{{ route('participant.signup') }}" class="default-btn default-btn--secondary move-top">
                                         <span>
                                             Register Now
                                         </span>
