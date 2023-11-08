@@ -4,7 +4,7 @@
         <div class="container">
             <div class="header-wrapper">
                 <div class="logo">
-                    <a href="index.html" style="color: #fc4d6e;font-size: 24px;">
+                    <a href="{{route('login')}}" style="color: #fc4d6e;font-size: 24px;">
 {{--                        <img src="{{asset('assets/images/logo/logo.png')}}" alt="logo">--}}
                         Department of Accounting Conference & Journal
                     </a>
@@ -13,6 +13,17 @@
                     <ul class="menu">
                         <li>
                             <a href="{{route('login')}}">Home</a>
+                        </li>
+
+
+                        <li>
+                            <a href="#about">Journal</a>
+                            <ul class="submenu">
+                                <li><a href="{{ route("about") }}">About</a></li>
+                                <li><a href="{{ route("author") }}">Author's Guide</a></li>
+{{--                                <li><a href="{{ route("about") }}">Event Schedule</a></li>--}}
+{{--                                <li><a href="{{ route("about") }}">Ticket Pricing</a></li>--}}
+                            </ul>
                         </li>
 
 {{--                        <li>--}}

@@ -28,4 +28,11 @@ class Participant extends Authenticatable
         }
         return [];
     }
+    public function submissionsJournal()
+    {
+
+            return JournalSubmission::where(['participant_id'=>$this->id])->get();
+
+        return [];
+    }
 }

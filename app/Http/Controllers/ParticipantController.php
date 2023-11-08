@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Conference;
 use App\Models\ConferenceSubmission;
+use App\Models\JournalSubmission;
 use App\Models\Participation;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,6 +32,18 @@ class ParticipantController extends Controller
         return view('pages.participant.dashboard',compact('user'));
     }
 
+    public function journal()
+    {
+        // Retrieve data or perform actions needed for the dashboard
+
+        // For example, retrieve conferences for the participant
+//        $conferences = auth()->user()->conferences; // Adjust the relationship according to your setup
+
+        $user = Auth::user();
+        // You can pass data to the view
+        return view('pages.participant.journal',compact('user'));
+    }
+
     public function joinConference(Request $request,$id)
     {
         $user = Auth::user();
@@ -49,19 +62,54 @@ class ParticipantController extends Controller
     {
         $user = Auth::user();
         $request->validate([
-            'conference' => 'required|file|mimes:docx,doc,pdf|max:2048'
+            'conference' => 'required|file|mimes:docx,doc,pdf|max:2048',
+            'payment_img' => 'required|file|mimes:jpg,jpeg,docx,doc,pdf|max:2048'
         ]);
         $conf = Conference::conference();
         $part = $user->hasApplied($conf->id);
         $fileModel = new ConferenceSubmission();
         if($request->file()) {
             $fileName = time().'_'.$request->conference->getClientOriginalName();
+            $fileNamePay = time().'_'.$request->payment_img->getClientOriginalName();
             $filePath = $request->file('conference')->storeAs('uploads', $fileName, 'public');
+            $filePathPay = $request->file('payment_img')->storeAs('uploads', $fileNamePay, 'public');
 
 
             $fileModel->participation_id = $part->id;
             $fileModel->title = $request->title;
+            $fileModel->type = $request->type;
+            $fileModel->status = "Submitted";
             $fileModel->url = '/public/' . $filePath;
+            $fileModel->payment_url = '/public/' . $filePathPay;
+            $fileModel->save();
+            return back()
+                ->with('success','File has been uploaded.')
+                ->with('file', $fileName);
+        }
+
+        return back();
+    }
+
+    public function uploadJournal(Request $request)
+    {
+        $user = Auth::user();
+        $request->validate([
+            'conference' => 'required|file|mimes:docx,doc,pdf|max:2048',
+            'payment_img' => 'required|file|mimes:jpg,jpeg,docx,doc,pdf|max:2048'
+        ]);
+        $fileModel = new JournalSubmission();
+        if($request->file()) {
+            $fileName = time().'_'.$request->conference->getClientOriginalName();
+            $fileNamePay = time().'_'.$request->payment_img->getClientOriginalName();
+            $filePath = $request->file('conference')->storeAs('uploads', $fileName, 'public');
+            $filePathPay = $request->file('payment_img')->storeAs('uploads', $fileNamePay, 'public');
+
+
+            $fileModel->participant_id = $user->id;
+            $fileModel->title = $request->title;
+            $fileModel->status = "Submitted";
+            $fileModel->url = '/public/' . $filePath;
+            $fileModel->payment_url = '/public/' . $filePathPay;
             $fileModel->save();
             return back()
                 ->with('success','File has been uploaded.')

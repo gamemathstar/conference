@@ -15,27 +15,7 @@
                         <article>
                             <div class="post-item-2">
                                 <div class="post-inner">
-                                    <div class="post-thumb mb-30 px-30 pt-30">
-                                        <img src="/doa.jpg" alt="blog">
-                                    </div>
-                                    <div class="post-content pt-0">
-                                        <h3>{{$conf->title}}</h3>
-                                        <ul class="blog__meta d-flex flex-wrap align-items-center mb-4">
-                                            <li class="blog__meta-author">
-                                                <a href="#"><span></span>
-                                                    15th October 2023
-                                                </a>
-                                            </li>
-                                            <li class="blog__meta-date">
-                                                <a href="#">
-                                                        <!-- <i class="fa-solid fa-calendar-days"></i> Font Awesome fontawesome.com --></span>
-                                                    6th December 2023
-                                                </a>
-                                            </li>
-                                        </ul>
-                                        <p>
-                                            {!! $conf->description !!}
-                                        </p>
+
 
                                         @if ($message = Session::get('success'))
                                             <div class="alert alert-success">
@@ -58,12 +38,8 @@
                                         </ul>
 
 
-                                        @if(!$user->hasApplied($conf->id))
-                                            <a href="{{route('participant.conference.join',[$conf->id])}}" class="btn default-btn--secondary">
-                                                Join us
-                                            </a>
-                                        @else
-                                            <form action="{{route('participant.conference.upload')}}" method="post" enctype="multipart/form-data">
+
+                                            <form action="{{route('participant.journal.upload')}}" method="post" enctype="multipart/form-data">
                                                 @csrf
                                                 <table class="table">
                                                     <tr>
@@ -83,29 +59,20 @@
                                                         </td>
                                                         <td>
                                                             <div class="form-group">
-                                                                <label for="">Conference Submission</label>
+                                                                <label for="">Journal Paper</label>
                                                                 <input type="file" class="form-control" name="conference">
                                                             </div>
                                                         </td>
                                                     </tr>
                                                     <tr>
-
-                                                        <td>
-                                                            <div class="form-group">
-                                                                <label for="">Submission Type</label>
-
-                                                                <select name="type" class="form-control">
-                                                                    <option>Conference</option>
-                                                                    <option>Colloquium</option>
-                                                                </select>
-                                                            </div>
-                                                        </td>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                <label for="" class="text-danger">(.doc or .pdf) Max size 2MB </label>
-                                                                <br>
-                                                                <button class="btn btn-outline-secondary">Submit</button>
-                                                            </div>
+                                                        <td colspan="2">
+                                                           <center>
+                                                               <div class="form-group">
+                                                                   <label for="" class="text-danger">(.doc or .pdf) Max size 2MB </label>
+                                                                   <br>
+                                                                   <button class="btn btn-outline-secondary">Submit</button>
+                                                               </div>
+                                                           </center>
 
                                                         </td>
                                                     </tr>
@@ -122,7 +89,7 @@
                                                         <th>Payment Status</th>
                                                         <th>Remark</th>
                                                     </tr>
-                                                    @foreach($user->submissions($conf->id) as $submission)
+                                                    @foreach($user->submissionsJournal() as $submission)
                                                         <tr>
                                                             <td>{{$loop->iteration}}</td>
                                                             <td>
@@ -136,10 +103,10 @@
                                                     @endforeach
                                                 </table>
                                             </form>
-                                        @endif
 
 
-                                    </div>
+
+
                                 </div>
                             </div>
 

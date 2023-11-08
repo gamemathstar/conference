@@ -13,6 +13,16 @@ class HomeController extends Controller
     {
         return view('pages.home.index');
     }
+    //
+    public function about(Request $request)
+    {
+        return view('pages.home.about');
+    }
+    //
+    public function author(Request $request)
+    {
+        return view('pages.home.author');
+    }
 
     public function signup(Request $request)
     {
