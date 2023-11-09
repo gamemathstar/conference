@@ -23,6 +23,11 @@ class HomeController extends Controller
     {
         return view('pages.home.author');
     }
+    //
+    public function ethical(Request $request)
+    {
+        return view('pages.home.ethical');
+    }
 
     public function signup(Request $request)
     {

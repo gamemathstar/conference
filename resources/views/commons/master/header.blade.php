@@ -21,7 +21,7 @@
                             <ul class="submenu">
                                 <li><a href="{{ route("about") }}">About</a></li>
                                 <li><a href="{{ route("author") }}">Author's Guide</a></li>
-{{--                                <li><a href="{{ route("about") }}">Event Schedule</a></li>--}}
+                                <li><a href="{{ route("ethical") }}">Ethical Statement</a></li>
 {{--                                <li><a href="{{ route("about") }}">Ticket Pricing</a></li>--}}
                             </ul>
                         </li>

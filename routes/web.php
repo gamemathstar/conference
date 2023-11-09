@@ -25,6 +25,7 @@ Route::prefix("/")->group(function () {
     Route::get('/',[HomeController::class,'index'])->name('login');
     Route::get('/journal/about',[HomeController::class,'about'])->name('about');
     Route::get('/journal/author-guide',[HomeController::class,'author'])->name('author');
+    Route::get('/journal/ethical-statment',[HomeController::class,'ethical'])->name('ethical');
 
 });
 Route::prefix("/admin")->group(function () {
