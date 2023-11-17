@@ -33,7 +33,9 @@
                             </li>
                         </ul>
                     </div>
-                    <a href="{{ route('participant.login.form') }}" class="default-btn move-right"><span>Get Ticket <i
+                    <a href="{{ route('participant.login.form') }}" class="default-btn move-right"><span>Conference Login <i
+                                class="fa-solid fa-arrow-right"></i></span> </a>
+                    <a href="{{ route('participant.login.form') }}" class="default-btn move-right"><span>Journal Login <i
                                 class="fa-solid fa-arrow-right"></i></span> </a>
                 </div>
             </div>
